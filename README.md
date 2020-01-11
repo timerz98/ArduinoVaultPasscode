@@ -37,4 +37,4 @@
 
 * [**Keypad**: _Interface 4×3 & 4×4 Membrane Keypad with Arduino_](https://lastminuteengineers.com/arduino-keypad-tutorial/)
 * [**Servo**: _How to control servo motor_](https://www.intorobotics.com/tutorial-how-to-control-the-tower-pro-sg90-servo-with-arduino-uno/)
-* [**LiquidCrystal_I2C**: _How to Use I2C Serial LCD 20X4 _](https://www.instructables.com/id/How-to-Use-I2C-Serial-LCD-20X4-Yellow-Backlight/)
+* [**LiquidCrystal_I2C**: _How to Use I2C Serial LCD 20X4_](https://www.instructables.com/id/How-to-Use-I2C-Serial-LCD-20X4-Yellow-Backlight/)
