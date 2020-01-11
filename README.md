@@ -4,9 +4,9 @@
 
 ## Table of contents
 
-* [Libraries] (#ArduinoVaultPasscode-Libraries)
-* [Pins] (#ArduinoVaultPasscode-Pins)
-* [Tutorials] (#ArduinoVaultPasscode-Tutorials)
+* [Libraries](#ArduinoVaultPasscode-Libraries)
+* [Pins](#ArduinoVaultPasscode-Pins)
+* [Tutorials](#ArduinoVaultPasscode-Tutorials)
 
 ## Requirements
 
@@ -20,27 +20,17 @@
 
 #### ArduinoVaultPasscode `Pins`
 
-#define SERVO_PIN			9
-
-#define GREEN_PIN			8
-
-#define RED_PIN				7
-
-#define BUZZER_PIN			6
-
-#define R1					41
-
-#define R2					43
-
-#define R3					45
-
-#define R4					47
-
-#define C1					49
-
-#define C2					51
-
-#define C3					53
+* SERVO_PIN			9
+* GREEN_PIN			8
+* RED_PIN				7
+* BUZZER_PIN			6
+* R1					41
+* R2					43
+* R3					45
+* R4					47
+* C1					49
+* C2					51
+* C3					53
 
 
 #### ArduinoVaultPasscode `Tutorials`
