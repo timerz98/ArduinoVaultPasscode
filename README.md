@@ -45,11 +45,8 @@
 * C4					53
 
 Check the code and find this line
-
 //Select only one keypad type
-
 #define KEYPAD_4x4
-
 //#define KEYPAD_3x4
 
 
