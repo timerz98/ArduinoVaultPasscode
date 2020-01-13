@@ -20,6 +20,8 @@
 
 #### `Pins`
 
+
+* I2C for LCD SDA 20, SCL 21
 * SERVO_PIN			9
 * GREEN_PIN			8
 * RED_PIN				7
