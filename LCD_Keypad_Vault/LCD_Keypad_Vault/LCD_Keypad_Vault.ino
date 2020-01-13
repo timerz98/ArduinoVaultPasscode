@@ -202,6 +202,7 @@ void loop() {
 
 	case S_TIMEOUT:
 		lcd->printWaitForTimeout(TIMEOUT_RANGE);
+		delay(3000);
 		while (1)
 		{
 			timer.run();
