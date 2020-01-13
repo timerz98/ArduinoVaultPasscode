@@ -78,11 +78,27 @@ uint8_t WrongPinCnt = 0;
 
 #define TIMEOUT_RANGE		1 //1 - 59
 
-#define LCD_ADDRESS			0x3F
+//Select only one LCD size
+//#define LCD_4x20
+#define LCD_2x16
+
+#ifdef LCD_4x20
+#define LCD_ADDRESS			0x27
 #define LCD_COLS			20
 #define LCD_ROWS			4
 #define LCD_PIN_CHAR		'*'
 #define LCD_PIN_ISHIDE		true
+#endif // LCD_4x20
+
+
+#ifdef LCD_2x16
+#define LCD_ADDRESS			0x27
+#define LCD_COLS			16
+#define LCD_ROWS			2
+#define LCD_PIN_CHAR		'*'
+#define LCD_PIN_ISHIDE		true
+#endif // LCD_2x16
+
 
 #define SERVO_PIN			9
 

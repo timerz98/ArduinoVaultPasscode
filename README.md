@@ -49,7 +49,11 @@
 Check the code and find this line  
 //Select only one keypad type  
 #define KEYPAD_4x4  
-//#define KEYPAD_3x4  
+//#define KEYPAD_3x4
+
+//Select only one LCD size  
+//#define LCD_4x20  
+#define LCD_2x16    
 
 
 #### `Tutorials`

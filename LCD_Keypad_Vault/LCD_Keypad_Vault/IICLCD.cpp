@@ -47,10 +47,16 @@ void IICLCD::printPin(String pin, char display, bool hide)
 
 void IICLCD::printIncorrectPin(uint8_t incorrect, uint8_t limit)
 {
-	lcd->setCursor(0, 2);
+	if (rows == 4)
+		lcd->setCursor(0, 2);
+	else if(rows == 2)
+		lcd->setCursor(0, 1);
 	lcd->print(clearRow());
 
-	lcd->setCursor(0, 2);
+	if (rows == 4)
+		lcd->setCursor(0, 2);
+	else if (rows == 2)
+		lcd->setCursor(0, 1);
 	lcd->print(String(limit - incorrect) + "/" + String(limit) + " tries left.");
 }
 
@@ -71,19 +77,31 @@ void IICLCD::printWaitForTimeout(uint8_t timeout)
 
 void IICLCD::printCountDown(String value)
 {
-	lcd->setCursor(0, 2);
+	if (rows == 4)
+		lcd->setCursor(0, 2);
+	else if (rows == 2)
+		lcd->setCursor(0, 1);
 	lcd->print(clearRow());
 
-	lcd->setCursor(0, 2);
+	if (rows == 4)
+		lcd->setCursor(0, 2);
+	else if (rows == 2)
+		lcd->setCursor(0, 1);
 	lcd->print("Remaining: " + value);
 }
 
 void IICLCD::printIsCorrect()
 {
-	lcd->setCursor(0, 2);
+	if (rows == 4)
+		lcd->setCursor(0, 2);
+	else if (rows == 2)
+		lcd->setCursor(0, 1);
 	lcd->print(clearRow());
 
-	lcd->setCursor(0, 2);
+	if (rows == 4)
+		lcd->setCursor(0, 2);
+	else if (rows == 2)
+		lcd->setCursor(0, 1);
 	lcd->print("Pincode accepted.   ");
 
 }
