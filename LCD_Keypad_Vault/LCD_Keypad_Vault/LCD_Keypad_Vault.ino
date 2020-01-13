@@ -13,8 +13,13 @@
 #include <Countimer.h>
 Countimer timer;
 
-//For keypad config
 #include <Keypad.h>
+//Select only one keypad type
+#define KEYPAD_4x4
+//#define KEYPAD_3x4 
+
+#ifdef KEYPAD_3x4
+//For keypad config
 const byte ROWS = 4; //four rows
 const byte COLS = 3; //three columns
 char keys[ROWS][COLS] = {
@@ -34,6 +39,33 @@ char keys[ROWS][COLS] = {
 
 byte rowPins[ROWS] = { R1, R2, R3, R4 }; //connect to the row pinouts of the keypad
 byte colPins[COLS] = { C1, C2, C3 }; //connect to the column pinouts of the keypad
+#endif // KEYPAD_3x4
+
+#ifdef KEYPAD_4x4
+//For keypad config
+const byte ROWS = 4; //four rows
+const byte COLS = 4; //four columns
+					 //define the cymbols on the buttons of the keypads
+char keys[ROWS][COLS] = {
+	{ '0','1','2','3' },
+	{ '4','5','6','7' },
+	{ '8','9','A','B' },
+	{ 'C','D','E','F' }
+};
+
+#define R1					39
+#define R2					41
+#define R3					43
+#define R4					45
+#define C1					47
+#define C2					49
+#define C3					51
+#define C4					53
+
+byte rowPins[ROWS] = { R1, R2, R3, R4 }; //connect to the row pinouts of the keypad
+byte colPins[COLS] = { C1, C2, C3, C4 }; //connect to the column pinouts of the keypad
+#endif // KEYPAD_4x4
+
 
 Keypad keypad = Keypad((char*)(keys), rowPins, colPins, ROWS, COLS);
 //End of keypad config

@@ -24,6 +24,8 @@
 * GREEN_PIN			8
 * RED_PIN				7
 * BUZZER_PIN			6
+
+//For Keypad 3x3
 * R1					41
 * R2					43
 * R3					45
@@ -31,6 +33,21 @@
 * C1					49
 * C2					51
 * C3					53
+
+//For Keypad 3x4
+* R1					39
+* R2					41
+* R3					43
+* R4					45
+* C1					47
+* C2					49
+* C3					51
+* C4					53
+
+Check the code and find this line
+//Select only one keypad type
+#define KEYPAD_4x4
+//#define KEYPAD_3x4
 
 
 #### `Tutorials`
