@@ -10,6 +10,10 @@
 #include "Buzzer.h"
 #include "IICLCD.h"
 
+#include <Bounce2.h>
+#define OPEN_BUTTON			5
+Bounce open_button = Bounce(); // Instantiate a Bounce object
+
 #include <Countimer.h>
 Countimer timer;
 
@@ -139,10 +143,22 @@ void setup() {
 
 	timer.setCounter(0, TIMEOUT_RANGE, 0, timer.COUNT_DOWN, NULL);
 	timer.setInterval(refreshClock, 1000);
+	
+	open_button.attach(OPEN_BUTTON,INPUT_PULLUP); // Attach the open_button to a pin with INPUT_PULLUP mode
+	open_button.interval(25); // Use a debounce interval of 25 milliseconds
+  
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() {
+
+	open_button.update(); // Update the Bounce instance
+   
+	if ( open_button.fell() ) {
+		lock_servo->Open();
+		delay(3000);
+		lock_servo->Close();
+	}
 
 	switch (safe_process)
 	{

@@ -16,7 +16,7 @@
 * [**Keypad.h**: _Library for using matrix style keypads with the Arduino_](https://github.com/Chris--A/Keypad)
 * [**Servo.h**: _This library allows an Arduino board to control RC (hobby) servo motors_](https://github.com/arduino-libraries/Servo)
 * [**LiquidCrystal_I2C.h**: _The library allows to control I2C displays with functions extremely similar to LiquidCrystal library_](https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library)
-
+* [**Bounce2.h**: _Debouncing library for Arduino and Wiring by Thomas Ouellet Fredericks with contributions from: Eric Lowry, Jim Schimpf, Tom Harkaway, Joachim Krüger and MrGradgrind._](https://github.com/thomasfredericks/Bounce2)
 
 #### `Pins`
 
@@ -26,6 +26,7 @@
 * GREEN_PIN			8
 * RED_PIN				7
 * BUZZER_PIN			6
+* OPEN_BUTTON			5
 
 //For Keypad 3x3
 * R1					41
