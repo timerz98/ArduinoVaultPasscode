@@ -11,9 +11,10 @@ Buzzer::Buzzer(uint8_t pin, bool is_high)
 	pinMode(pin, OUTPUT);
 	
 	if (is_high)
-		digitalWrite(pin, HIGH);
+		On();
 	else
-		digitalWrite(pin, LOW);
+		Off();
+		
 }
 
 Buzzer::~Buzzer()
@@ -23,10 +24,12 @@ Buzzer::~Buzzer()
 
 void Buzzer::On()
 {
-	digitalWrite(pin, HIGH);
+	//digitalWrite(pin, HIGH);
+	tone(pin, 1000);
 }
 
 void Buzzer::Off()
 {
-	digitalWrite(pin, LOW);
+	//digitalWrite(pin, LOW);
+	noTone(pin);
 }
