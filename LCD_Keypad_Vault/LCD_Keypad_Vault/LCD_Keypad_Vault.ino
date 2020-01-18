@@ -245,7 +245,8 @@ void enterPin()
 		if (key == '*')
 		{
 			EnteredPin = "";
-			lcd->printPin(EnteredPin, LCD_PIN_CHAR, LCD_PIN_ISHIDE);
+			lcd->clearLCD();
+			lcd->printEnterPin();
 		}
 		else if (key == '#')
 		{
