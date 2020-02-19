@@ -17,7 +17,7 @@
 * [**Servo.h**: _This library allows an Arduino board to control RC (hobby) servo motors_](https://github.com/arduino-libraries/Servo)
 * [**LiquidCrystal_I2C.h**: _The library allows to control I2C displays with functions extremely similar to LiquidCrystal library_](https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library)
 * [**Bounce2.h**: _Debouncing library for Arduino and Wiring by Thomas Ouellet Fredericks with contributions from: Eric Lowry, Jim Schimpf, Tom Harkaway, Joachim Krüger and MrGradgrind._](https://github.com/thomasfredericks/Bounce2)
-
+* [**NewPing.h**: _Works with many different ultrasonic sensor models: SR04, SRF05, SRF06, DYP-ME007 & Parallax PING_](https://playground.arduino.cc/Code/NewPing/)
 #### `Pins`
 
 
@@ -47,6 +47,10 @@
 * C3					51
 * C4					53
 
+//Sonar
+* ECHO					11
+* TRIG					12
+
 Check the code and find this line  
 //Select only one keypad type  
 #define KEYPAD_4x4  
@@ -62,3 +66,4 @@ Check the code and find this line
 * [**Keypad**: _Interface 4×3 & 4×4 Membrane Keypad with Arduino_](https://lastminuteengineers.com/arduino-keypad-tutorial/)
 * [**Servo**: _How to control servo motor_](https://www.intorobotics.com/tutorial-how-to-control-the-tower-pro-sg90-servo-with-arduino-uno/)
 * [**LiquidCrystal_I2C**: _How to Use I2C Serial LCD 20X4_](https://www.instructables.com/id/How-to-Use-I2C-Serial-LCD-20X4-Yellow-Backlight/)
+* [**NewPing**: _Arduino HC-SR04 (with LCD)_](https://www.instructables.com/id/Arduino-HC-SR04-with-LCD/)

@@ -10,6 +10,14 @@
 #include "Buzzer.h"
 #include "IICLCD.h"
 
+#include "NewPing.h"
+#define TRIGGER_PIN  12  // Arduino pin tied to trigger pin on the ultrasonic sensor.
+#define ECHO_PIN     11  // Arduino pin tied to echo pin on the ultrasonic sensor.
+#define MAX_DISTANCE 300 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
+
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // Creating the NewPing Object.
+unsigned long initial_distance = 0;
+
 #include <Bounce2.h>
 #define OPEN_BUTTON			5
 Bounce open_button = Bounce(); // Instantiate a Bounce object
@@ -146,6 +154,9 @@ void setup() {
 	
 	open_button.attach(OPEN_BUTTON,INPUT_PULLUP); // Attach the open_button to a pin with INPUT_PULLUP mode
 	open_button.interval(25); // Use a debounce interval of 25 milliseconds
+
+	initial_distance = sonar.ping_in();
+	delay(1000);
   
 }
 
@@ -208,6 +219,16 @@ void loop() {
 		led_red->Off();
 		lock_servo->Open();
 		buzzer->Off();
+
+		while (true)
+		{
+			unsigned long value = sonar.ping_cm();
+
+			if (value >= initial_distance || value == 0)
+				break;
+		}
+
+
 		delay(5000);
 
 		lcd->clearLCD();
@@ -218,6 +239,7 @@ void loop() {
 
 	case S_TIMEOUT:
 		lcd->printWaitForTimeout(TIMEOUT_RANGE);
+		led_red->On();
 		delay(3000);
 		while (1)
 		{
